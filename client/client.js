@@ -1,13 +1,15 @@
 const net = require('net');
 const dgram = require('dgram');
 const fs = require('fs');
+const path = require('path');
 
 // Load Config
 let config = {};
 try {
-    config = JSON.parse(fs.readFileSync('config.json', 'utf8'));
+    const configPath = path.join(__dirname, 'config.json');
+    config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
 } catch (e) {
-    console.error('Failed to load config.json');
+    console.error('Failed to load config.json:', e.message);
     process.exit(1);
 }
 
