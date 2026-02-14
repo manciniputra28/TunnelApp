@@ -1,0 +1,17 @@
+{
+    "server": "x3lxbhrf9h9u9ygt3cwd35prquvgxykj.vryakn.web.id",
+    "controlPort": 5000,
+    "secret": "mysupersecretpassword",
+    "tunnels": [
+        {
+            "protocol": "tcp",
+            "remote": 8080,
+            "local": 80
+        },
+        {
+            "protocol": "udp",
+            "remote": 0,
+            "local": 3000
+        }
+    ]
+}
